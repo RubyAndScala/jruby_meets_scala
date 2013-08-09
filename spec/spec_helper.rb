@@ -1,0 +1,1 @@
+require_relative "../lib/jruby_meets_scala"
