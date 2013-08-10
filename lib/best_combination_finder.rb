@@ -5,6 +5,9 @@ class BestCombinationFinder
   end
 
   def combinations(elements)
-    elements.map {|es| es.max_by(&quality_measure)}
+    return [] if elements.empty?
+    first, *rest = elements
+    product = first.product(*rest)
+    product.max_by(&quality_measure)
   end
 end

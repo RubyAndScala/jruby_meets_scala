@@ -2,7 +2,7 @@ require "spec_helper"
 
 
 describe "BestCombinationFinder" do
-  let(:quality_measure) { lambda {|x| x }}
+  let(:quality_measure) { lambda {|arr| arr.inject(0, :+) }}
   subject(:finder) { BestCombinationFinder.new(quality_measure) }
   it "should be instantiable" do
     expect { subject }.to_not raise_exception
