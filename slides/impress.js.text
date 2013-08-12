@@ -211,7 +211,11 @@ In Scala, how do you...
  * Add functionality to existing classes?
    * Implicits (Pimp-my-library pattern)
  * Create DSLs?
-   * Implicits, Macros
+   * Implicits
+   * Macros
+ * Achieve scalability
+   * Parallel collections
+   * Actors
 
 
 %% The End
