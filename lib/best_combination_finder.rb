@@ -33,13 +33,5 @@ class BestCombinationFinder
     def best
       max_by(&quality_measure)
     end
-
-    def eql?(other)
-      to_a.eql?(other)
-    end
-
-    def ==(other)
-      to_a == other
-    end
   end
 end
