@@ -152,19 +152,28 @@ blockquote {
 Why Ruby?
 ---------
 
-Y'all know :)
--------------
+ * [Rails](http://rubyonrails.org/)
+ * Expressiveness
+ * [Ruby philosophy](http://en.wikipedia.org/wiki/Ruby_(programming_language)#Philosophy)
+
+> Often people, especially computer engineers, focus on the machines.
+> They think, "By doing this, the machine will run faster. By doing this, the machine will run more effectively. By doing this, the machine will something something something."
+> They are focusing on machines.
+> But in fact we need to focus on humans, on how humans care about doing programming or operating the application of the machines.
+> We are the masters. They are the slaves.
+
 
 !SLIDE slide x=1180 y=400
 Why Scala?
 ----------
 
- * Performance
- * Reactive Web Frameworks
- * Actor Framework
- * Type Safety
+ * [Reactive](http://www.reactivemanifesto.org/) [Web](http://spray.io/) [Frameworks](http://www.playframework.com/)
+ * [Akka Actor Framework](http://akka.io/)
+ * Expressiveness
+ * [Type Safety](http://www.slideshare.net/dgalichet/demystifying-scala-type-system), [Type Inference](http://docs.scala-lang.org/tutorials/tour/local-type-inference.html), [Macro tricks](http://scalamacros.org/)
+ * [Performance](http://benchmarksgame.alioth.debian.org/u64q/benchmark.php?test=all&lang=jruby&lang2=scala&data=u64q#faster-programs-measurements)
 
-Learn more at http://www.scala-tour.com/
+Learn more at [scala-tour.com](http://www.scala-tour.com/)
 
 !SLIDE slide transparent x=0 y=0 scale=5 z=-1
 
@@ -173,7 +182,7 @@ Learn more at http://www.scala-tour.com/
 JRuby → Scala
 -------------
 
- * jruby-scala-collections
+ * [jruby-scala-collections](https://github.com/RubyAndScala/jruby-scala-collections)
 
 
 
@@ -181,8 +190,8 @@ JRuby → Scala
 Scala → JRuby
 -------------
 
- * Scuby
- * jruby-scala-collections
+ * [Scuby](https://github.com/mcamou/scuby)
+ * [jruby-scala-collections](https://github.com/RubyAndScala/jruby-scala-collections)
 
 
 
@@ -191,9 +200,18 @@ Learnings
 ---------
 
  * It's easier to make JRuby compatible with Scala
- * Most roads pass by Java
+ * Many roads pass by Java
  * Real fun starts when JRuby and Scala interact directly
  * Collection interop is biggest pain-point
+
+!SLIDE slide x=1180 y=1200 scale=1
+In Scala, how do you...
+-----------------------
+
+ * Add functionality to existing classes?
+   * Implicits (Pimp-my-library pattern)
+ * Create DSLs?
+   * Implicits, Macros
 
 
 %% The End
