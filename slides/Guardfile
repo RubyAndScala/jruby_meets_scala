@@ -1,0 +1,18 @@
+# A sample Guardfile
+# More info at https://github.com/guard/guard#readme
+
+# Add files and commands to this file, like the example:
+#   watch(%r{file/path}) { `command(s)` }
+#
+guard 'shell' do
+  def exec(cmd)
+    puts cmd
+    puts `#{cmd}`
+  end
+  watch(/(.*).text/) {|m| exec "slideshow build #{m[0]} -t impress.js" }
+end
+
+guard 'livereload' do
+  watch(%r{.+\.(html|css|js)$})
+#  watch(%r{(app|vendor)(/assets/\w+/(.+\.(css|js|html))).*}) { |m| "/assets/#{m[3]}" }
+end

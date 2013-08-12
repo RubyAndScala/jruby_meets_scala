@@ -1,0 +1,182 @@
+title: JRuby meets Scala | Not even a compiler can separate us
+author: Martin Mauch
+
+
+%%%%%
+%% Add some inline style rules...
+
+%css
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background-image: -webkit-linear-gradient(top left, black, white);
+  background-image:    -moz-linear-gradient(top left, black, white);
+  background-image:     -ms-linear-gradient(top left, black, white);
+  background-image:      -o-linear-gradient(top left, black, white);
+  background-image:         linear-gradient(top left, black, white);
+}
+
+.impress-enabled .step {
+  width: 1000px;
+  height: 600px;
+  padding: 40px 60px;
+  font-size: 36px;
+  text-shadow: 5px 5px 12px rgba(0,0,0,0.2);
+
+  margin: 10;
+  opacity: 0.1;
+  border-style:solid;
+  border-color:#ff0000 #ff0000;
+  border-radius: 60px;
+  -webkit-transition: opacity 2s;
+  -moz-transition:    opacity 2s;
+  -ms-transition:     opacity 2s;
+  -o-transition:      opacity 2s;
+  transition:         opacity 2s;
+}
+
+.impress-enabled .step.active { opacity: 1 }
+
+
+.slide h2 {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 48px;
+  text-align: center;
+  text-shadow: 10px 10px 24px rgba(0,0,0,0.5);
+}
+
+.step.active {
+  opacity: 1;
+}
+
+.slide {
+  background: white;
+}
+
+.step.slide.transparent {
+  opacity: 0.0;
+}
+
+.step.slide.omnipresent {
+  opacity: 1.0;
+}
+
+.slide p,
+.slide li {
+  font-weight: bold;
+  letter-spacing: -.03em;
+}
+  
+.slide > ul {
+  list-style:none;  
+}
+
+.slide ol {
+  margin-left:2em;  
+}
+  
+.slide > ul ul {
+  margin-left:2em;  
+  list-style: none;
+}
+
+.slide li li {
+  font-size:80%;
+}
+  
+.slide li {
+  margin:.2em 0;
+}
+
+.slide > ul > li:before {
+  content:'\2714';
+  color: #a0c12c;
+  padding-right: .2em;
+}
+    
+.slide li li:before {
+  content: '\279C';
+  color: #28bcbc;
+  padding-right: .2em;
+}
+
+code {
+  background-color: yellow;
+  font-size: 14px;
+}
+
+%end
+
+
+%%%%%%%%%%%%%%%%%%%
+%% Here we go...
+
+
+!SLIDE slide omnipresent x=0 y=0 scale=5
+
+<div id="myinnercontainer" style="position:absolute; top:50%; right:50%; height:10em; margin-top:-5em; margin-right:-8.5em">
+  <h2>JRuby <img src="img/ruby_logo.svg" width="60" height="60"/>&nbsp;
+  <span style="display:inline-block;vertical-align:middle">
+  <img src="img/arrow_curved_blue.svg" width="210" height="105"/><br/>
+  <img src="img/arrow_curved_blue.svg" width="210" height="105" style="-webkit-transform:rotate(180deg);"/>
+  </span>&nbsp;
+  Scala <img src="img/scala_logo.svg" width="60" height="100"/>
+  </h2>
+</div>
+
+
+!SLIDE slide x=-1180 y=400
+Why Ruby?
+---------
+
+Y'all know :)
+-------------
+
+!SLIDE slide x=1180 y=400
+Why Scala?
+----------
+
+ * Performance
+ * Reactive Web Frameworks
+ * Actor Framework
+ * Type Safety
+
+Learn more at http://www.scala-tour.com/
+
+!SLIDE slide transparent x=0 y=0 scale=5 z=-1
+
+
+!SLIDE slide x=0 y=-550 scale=0.4
+JRuby → Scala
+-------------
+
+ * jruby-scala-collections
+
+
+
+!SLIDE slide x=0 y=330 scale=0.4
+Scala → JRuby
+-------------
+
+ * Scuby
+ * jruby-scala-collections
+
+
+
+!SLIDE slide x=0 y=1000
+Learnings
+---------
+
+ * It's easier to make JRuby compatible with Scala
+ * Most roads pass by Java
+ * Real fun starts when JRuby and Scala interact directly
+ * Collection interop is biggest pain-point
+
+
+%% The End
+%%%%%%%%%%%%%%%
