@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
 
   s.files        = Dir.glob("lib/**/*") + %w(README.md ext/dist/jruby_meets_scala.jar)
   s.require_path = 'lib'
+  s.add_dependency('jruby-scala-collections')
   s.add_development_dependency('rspec')
   s.add_development_dependency('guard')
   s.add_development_dependency('guard-rspec-jruby')

@@ -7,13 +7,16 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     atomic (1.1.12)
+    atomic (1.1.12-java)
     coderay (1.0.9)
     em-websocket (0.5.0)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.5.3)
     eventmachine (1.0.3)
+    eventmachine (1.0.3-java)
     fetcher (0.1.0)
     ffi (1.9.0)
+    ffi (1.9.0-java)
     formatador (0.2.4)
     gli (2.7.0)
     guard (1.8.2)
@@ -32,6 +35,7 @@ GEM
     guard-shell (0.5.1)
       guard (>= 1.1.0)
     http_parser.rb (0.5.3)
+    http_parser.rb (0.5.3-java)
     i18n (0.6.4)
     kramdown (1.1.0)
     listen (1.2.3)
@@ -54,6 +58,11 @@ GEM
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
+    pry (0.9.12.2-java)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+      spoon (~> 0.0)
     rb-fsevent (0.9.3)
     rb-inotify (0.9.0)
       ffi (>= 0.5.0)
@@ -68,14 +77,19 @@ GEM
       props (>= 1.0.0)
       textutils (>= 0.2.0)
     slop (3.4.6)
+    spoon (0.0.4)
+      ffi
     textutils (0.6.6)
       logutils (~> 0.5)
     thor (0.18.1)
     thread_safe (0.1.2)
       atomic
+    thread_safe (0.1.2-java)
+      atomic
     tzinfo (0.3.37)
 
 PLATFORMS
+  java
   ruby
 
 DEPENDENCIES

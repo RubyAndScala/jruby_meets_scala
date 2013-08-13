@@ -8,15 +8,15 @@ import java.util.{List => JList}
 
 class BestCombinationFinder(_qualityMeasure: JRubyObject) {
 
-  type Elements = java.util.List[java.util.List[Any]]
+  type Elements = Seq[Seq[Any]]
 
-  val qualityMeasure = _qualityMeasure.as[JList[Any] => Double]
+  val qualityMeasure = _qualityMeasure.as[Seq[Any] => Double]
 
   def combinations(elements:Elements) = {
-    new Combinations(elements.asScala.map(_.asScala), qualityMeasure)
+    new Combinations(elements, qualityMeasure)
   }
 
-  class Combinations(elements:Seq[Seq[Any]], qualityMeasure: JList[Any] => Double) {
+  class Combinations(elements:Seq[Seq[Any]], qualityMeasure: Seq[Any] => Double) {
 
     def crossProduct(xs:List[Any], zss: List[List[Any]]):List[List[Any]] = {
       for {
@@ -28,9 +28,9 @@ class BestCombinationFinder(_qualityMeasure: JRubyObject) {
     def all = {
       val empty: List[List[Any]] = List(List())
       val asList:List[List[Any]] = elements.toList.map(_.toList)
-      asList.foldRight(empty)(crossProduct _).map(_.asJava).asJava
+      asList.foldRight(empty)(crossProduct _)
     }
 
-    def best = all.asScala.maxBy(x => qualityMeasure(x))
+    def best = all.maxBy(x => qualityMeasure(x))
   }
 }
