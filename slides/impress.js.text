@@ -163,11 +163,11 @@ Why Ruby?
  * Expressiveness
  * [Ruby philosophy](http://en.wikipedia.org/wiki/Ruby_(programming_language)#Philosophy)
 
-> Often people, especially computer engineers, focus on the machines.
-> They think, "By doing this, the machine will run faster. By doing this, the machine will run more effectively. By doing this, the machine will something something something."
-> They are focusing on machines.
-> But in fact we need to focus on humans, on how humans care about doing programming or operating the application of the machines.
-> We are the masters. They are the slaves.
+%% > Often people, especially computer engineers, focus on the machines.
+%% > They think, "By doing this, the machine will run faster. By doing this, the machine will run more effectively. By doing this, the machine will something something something."
+%% > They are focusing on machines.
+%% > But in fact we need to focus on humans, on how humans care about doing programming or operating the application of the machines.
+%% > We are the masters. They are the slaves.
 
 
 !SLIDE slide x=1180 y=400
@@ -235,7 +235,9 @@ Scala → JRuby (Harder)
 ----------------------
 
  * Use [Scuby](https://github.com/mcamou/scuby)
- * [jruby-scala-collections](https://github.com/RubyAndScala/jruby-scala-collections)
+   * Wraps JRuby objects
+   * Provides convenience methods and dynamic invocation facilities
+ * Use [jruby-scala-collections](https://github.com/RubyAndScala/jruby-scala-collections) for nested collections
 
 
 !SLIDE slide x=-350 y=180 scale=0.4 z=-1000
