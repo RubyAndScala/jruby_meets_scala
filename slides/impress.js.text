@@ -198,9 +198,9 @@ Differences
  * Learning curve
    * Ruby: Just try it
    * Scala: Obey the compiler
- * Functional programming
-   * Ruby: 2nd class citizen
-   * Scala: 1.2nd class citizen
+ * Programming paradigm
+   * Ruby: 80% Object-Oriented, 20% Functional
+   * Scala: 50% Object-Oriented, 50% Functional
 
 
 !SLIDE slide transparent x=0 y=0 scale=5 z=-1
@@ -211,8 +211,8 @@ Tooling
 
  * sbt
    * continuously compiles Scala code
-   * writes .classpath file
    * packages .jar for gem
+   * writes .classpath file
  * scala_helper.rb
    * Loads .class and .jar files from .classpath
  * guard
