@@ -58,7 +58,11 @@ body {
   background: white;
 }
 
-.step.slide.transparent {
+.step.slide.transparent.future {
+  opacity: 0.0;
+}
+
+.step.slide.transparent.past {
   opacity: 0.0;
 }
 
@@ -175,8 +179,41 @@ Why Scala?
 
 Learn more at [scala-tour.com](http://www.scala-tour.com/)
 
+!SLIDE slide x=0 y=800 scale=0.7
+Similarities
+-------------
+
+ * Syntax
+ * Collection library
+ * DSL capabilities
+ * Code reuse via modules/traits
+
+!SLIDE slide x=0 y=1350 scale=0.7
+Differences
+-------------
+
+ * Learning curve
+   * Ruby: Just try it
+   * Scala: Obey the compiler
+ * Functional programming
+   * Ruby: 2nd class citizen
+   * Scala: 1.2nd class citizen
+
+
 !SLIDE slide transparent x=0 y=0 scale=5 z=-1
 
+!SLIDE slide x=0 y=-110 scale=0.4
+Tooling
+-------
+
+ * sbt
+   * continuously compiles Scala code
+   * writes .classpath file
+   * packages .jar for gem
+ * scala_helper.rb
+   * Loads .class and .jar files from .classpath
+ * guard
+   * picks up changes in Ruby and .class files
 
 !SLIDE slide x=0 y=-550 scale=0.4
 JRuby → Scala
@@ -195,7 +232,7 @@ Scala → JRuby
 
 
 
-!SLIDE slide x=0 y=1000
+!SLIDE slide transparent x=0 y=0 z=30 scale=10
 Learnings
 ---------
 
