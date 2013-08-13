@@ -110,8 +110,11 @@ body {
 }
 
 code {
-  background-color: yellow;
-  font-size: 14px;
+  font-family: 'Courier new', Courier, sans-serif;
+}
+
+div.CodeRay table.CodeRay {
+  font-size: 22px;
 }
 
 blockquote {
@@ -216,21 +219,51 @@ Tooling
    * picks up changes in Ruby and .class files
 
 !SLIDE slide x=0 y=-550 scale=0.4
-JRuby → Scala
--------------
+JRuby → Scala (Easier)
+-----------------------
 
- * [jruby-scala-collections](https://github.com/RubyAndScala/jruby-scala-collections)
+ * Just call Scala (most operators work)
+ * Use send for crazy Scala operators: `scala_list.send(:"+=", e)`
+ * Collections: Either...
+   * convert to and expect `java.util.(List|Map)` or
+   * use [jruby-scala-collections](https://github.com/RubyAndScala/jruby-scala-collections) and `#to_scala` + `#from_scala`
 
 
 
 !SLIDE slide x=0 y=330 scale=0.4
-Scala → JRuby
--------------
+Scala → JRuby (Harder)
+----------------------
 
- * [Scuby](https://github.com/mcamou/scuby)
+ * Use [Scuby](https://github.com/mcamou/scuby)
  * [jruby-scala-collections](https://github.com/RubyAndScala/jruby-scala-collections)
 
 
+!SLIDE slide x=-350 y=180 scale=0.4 z=-1000
+
+<% code lang: 'scala', engine: 'coderay' do %>
+require("test.rb")
+
+// Sending methods via .send or Dynamic trait
+eval("[1,2,3]").send[Long](`length) must beEqualTo(3)
+eval("[1,2,3]").length must beEqualTo(3)
+
+// Ruby reflection in Scala
+eval[RubyObj]("[]").isA_?(`Array) must beTrue
+eval[RubyObj]("[]").respondTo_?(`length) must beTrue
+
+// obj(something) is forwared to obj[something]
+eval("['foo','bar','baz']")(0) must beEqualTo("foo")
+eval("{ :foo => 1, :bar => 2, :baz => 3 }")(`foo) must beEqualTo(1)
+
+// Cast to trait/interface via .as[TraitName]
+trait Person {
+  def firstname: String
+  def firstname_=(f: String): Unit
+}
+val zaphod:Person = new RubyObject(`Person, "Zaphod").as[Person]
+zaphod.firstname must beEqualTo("Zaphod")
+zaphod.firstname = "The Zeeb"
+<% end %>
 
 !SLIDE slide transparent x=0 y=0 z=30 scale=10
 Learnings
