@@ -21,7 +21,7 @@ body {
 }
 
 .impress-enabled .step {
-  width: 1000px;
+  width: 900px;
   height: 600px;
   padding: 40px 60px;
   font-size: 30px;
@@ -239,8 +239,36 @@ Scala → JRuby (Harder)
    * Provides convenience methods and dynamic invocation facilities
  * Use [jruby-scala-collections](https://github.com/RubyAndScala/jruby-scala-collections) for nested collections
 
+!SLIDE slide transparent x=0 y=0 scale=5 z=-1
 
-!SLIDE slide x=-350 y=180 scale=0.4 z=-1000
+!SLIDE slide x=0 y=10000 z=30 scale=10
+`slides.map(_.learnings).sum`
+------------------------------
+
+ * It's not that hard when you know how to start
+ * It's easier to make JRuby work with Scala
+ * Continuous Testing is helpful (as always)
+
+!SLIDE slide x=0 y=20000 z=30 scale=10
+`future { ruby.scala() }`
+------------------------------
+
+ * (Mostly) green Rubyspecs for jruby-scala-collections
+ * Scuby wraps Scala functions as JRuby blocks
+ * Proxy tries to call Scala, falls back to JRuby
+
+!SLIDE slide x=0 y=30000 z=30 scale=10
+-- Le fin --
+------------
+
+ * Questions?
+ * Scala rants?
+ * <a href="#/step-14">Example Scuby code (Scala → JRuby)</a>
+ * <a href="#/step-15">In Scala, how do you...?</a>
+
+
+
+!SLIDE slide x=-2800 y=30000 scale=0.4 z=-1000
 
 <% code lang: 'scala', engine: 'coderay' do %>
 require("test.rb")
@@ -267,16 +295,7 @@ zaphod.firstname must beEqualTo("Zaphod")
 zaphod.firstname = "The Zeeb"
 <% end %>
 
-!SLIDE slide transparent x=0 y=0 z=30 scale=10
-Learnings
----------
-
- * It's easier to make JRuby compatible with Scala
- * Many roads pass by Java
- * Real fun starts when JRuby and Scala interact directly
- * Collection interop is biggest pain-point
-
-!SLIDE slide x=1180 y=1200 scale=1
+!SLIDE slide x=-2800 y=30800 scale=0.4 z=-1000
 In Scala, how do you...
 -----------------------
 
