@@ -16,7 +16,7 @@ class BestCombinationFinder(_qualityMeasure: JRubyObject) {
     new Combinations(elements, qualityMeasure)
   }
 
-  class Combinations(elements:Seq[Seq[Any]], qualityMeasure: Seq[Any] => Double) {
+  class Combinations(elements:Elements, qualityMeasure: Seq[Any] => Double) {
 
     def crossProduct(xs:List[Any], zss: List[List[Any]]):List[List[Any]] = {
       for {
