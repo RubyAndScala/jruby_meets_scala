@@ -183,8 +183,8 @@ Why Scala?
 Learn more at [scala-tour.com](http://www.scala-tour.com/)
 
 !SLIDE slide x=0 y=800 scale=0.7
-Similarities
--------------
+What makes learning Scala easy?
+-------------------------------
 
  * Syntax
  * Collection library
@@ -192,8 +192,8 @@ Similarities
  * Code reuse via modules/traits
 
 !SLIDE slide x=0 y=1350 scale=0.7
-Differences
--------------
+What makes learning Scala hard?
+-------------------------------
 
  * Learning curve
    * Ruby: Just try it
@@ -209,14 +209,14 @@ Differences
 Tooling
 -------
 
- * sbt
-   * continuously compiles Scala code
-   * packages .jar for gem
-   * writes .classpath file
- * scala_helper.rb
-   * Loads .class and .jar files from .classpath
- * guard
-   * picks up changes in Ruby and .class files
+ * The .classpath Treaty
+   * `sbt write-classpath` → `.classpath` → `scala_helper.rb`
+ * Continuous Testing
+   * `sbt ~compile` Scala code
+   * `guard-rspec-jruby` picks up changes in `.rb` and `.class` files
+ * Packaging
+   * `sbt dist` → `.jar`
+   * `.gemspec` includes `.jar`
 
 !SLIDE slide x=0 y=-550 scale=0.4
 JRuby → Scala (Easier)
