@@ -5,13 +5,13 @@ class BestCombinationFinder
   end
 
   def combinations(elements)
-    Combinations.new(quality_measure, elements)
+    Combinations.new(elements, quality_measure)
   end
 
   class Combinations
     include Enumerable
     attr_reader :quality_measure, :elements
-    def initialize(quality_measure, elements)
+    def initialize(elements, quality_measure)
       @quality_measure = quality_measure
       @elements = elements
     end
