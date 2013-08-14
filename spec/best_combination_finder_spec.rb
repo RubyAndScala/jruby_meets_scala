@@ -10,25 +10,26 @@ describe "BestCombinationFinder" do
   end
 
   describe "#combinations(elements)" do
-    subject(:combinations) { finder.combinations(elements.to_scala) }
-
+    let(:combinations) { finder.combinations(elements.to_scala) }
+    let(:best_combinations) { combinations.best.from_scala }
+    let(:all_combinations) { combinations.all.from_scala }
     context "for empty elements" do
       let(:elements) { [] }
-      it { combinations.all.from_scala.should == [[]] }
-      it { combinations.best.from_scala.should == [] }
+      it { all_combinations.should == [[]] }
+      it { best_combinations.should == [] }
     end
 
     context "for a single level of elements" do
       let(:elements) { [[1,2]] }
       it "should return the best element according to the quality" do
-        combinations.best.from_scala.should == [2]
+        best_combinations.should == [2]
       end
     end
 
     context "for a multiple level of elements" do
       let(:elements) { [[1,2],[3,4]] }
       it "should return the best element according to the quality" do
-        combinations.best.from_scala.should == [2,4]
+        best_combinations.should == [2,4]
       end
     end
 
