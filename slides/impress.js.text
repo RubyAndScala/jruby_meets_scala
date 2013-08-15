@@ -178,7 +178,7 @@ Why Scala?
  * [Akka Actor Framework](http://akka.io/)
  * Expressiveness
  * [Type Safety](http://www.slideshare.net/dgalichet/demystifying-scala-type-system), [Type Inference](http://docs.scala-lang.org/tutorials/tour/local-type-inference.html), [Macro tricks](http://scalamacros.org/)
- * [Performance](http://benchmarksgame.alioth.debian.org/u64q/benchmark.php?test=all&lang=jruby&lang2=scala&data=u64q#faster-programs-measurements)
+ * [Performance](http://benchmarksgame.alioth.debian.org/u64q/benchmark.php?test=all&lang=jruby&lang2=scala&data=u64q#faster-programs-measurements) + Java InterOp
 
 Learn more at [scala-tour.com](http://www.scala-tour.com/)
 
@@ -255,7 +255,7 @@ Scala → JRuby (Harder)
 
  * (Mostly) green Rubyspecs for jruby-scala-collections
  * Scuby wraps Scala functions as JRuby blocks
- * Proxy tries to call Scala, falls back to JRuby
+ * Proxy class that tries to call Scala, falls back to JRuby
 
 !SLIDE slide x=0 y=30000 z=30 scale=10
 -- Le fin --
