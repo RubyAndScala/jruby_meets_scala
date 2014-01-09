@@ -33,3 +33,6 @@ gem install slideshow
 slideshow install impress.js
 slideshow build jruby_meets_scala.text -t impress.js
 ```
+
+The slides are precompiled and can be accessed [here](http://RubyAndScala.github.io/jruby_meets_scala/slides/jruby_meets_scala.html).
+
